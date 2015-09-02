@@ -1,0 +1,32 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws (2.10.2)
+      http_connection
+      uuidtools
+      xml-simple
+    coderay (1.1.0)
+    colored (1.2)
+    http_connection (1.4.4)
+    method_source (0.8.2)
+    mime-types (2.6.1)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rake (10.4.2)
+    simple-cloudfront-invalidator (1.0.1)
+      colored (= 1.2)
+    slop (3.6.0)
+    uuidtools (2.1.5)
+    xml-simple (1.1.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws
+  mime-types
+  pry
+  rake
+  simple-cloudfront-invalidator
