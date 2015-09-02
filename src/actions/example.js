@@ -10,8 +10,11 @@ export function test(text) {
 
 export function testAsync(text) {
   return dispatch => {
+    // dispatch optimistic update
+    dispatch(test(text))
     setTimeout(() => {
-      dispatch(test(text))
+      // dispatch final update
+      dispatch(test(`${text} async`))
     }, 1000)
   }
 }

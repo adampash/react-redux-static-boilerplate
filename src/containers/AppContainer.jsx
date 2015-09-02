@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect, dispatch } from 'react-redux'
 import DumbComponent from '../components/DumbComponent.jsx'
-import { test } from '../actions/foo_actions'
+import { test } from '../actions/example'
 
 
 let AppContainer = React.createClass({
