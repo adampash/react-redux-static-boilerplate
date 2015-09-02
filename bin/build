@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir -p build
+
+echo "Copying index.html to build"
+cp index.html build/
+echo "[DONE]"
+echo "Compiling webpack bundle"
+webpack -p --config webpack.production.config.js
+echo "[DONE]"
+echo "Deploying to S3"
+rake aws:deploy
+echo "[DONE]"
