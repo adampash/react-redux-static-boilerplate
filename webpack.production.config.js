@@ -12,7 +12,7 @@ config.output = {
 config.module.loaders.push(
       {
         test: /\.scss$/,
-        loader: "style!css?sourceMap!autoprefixer-loader!sass"
+        loader: "style!css!autoprefixer-loader!sass"
       },
       {
         test: /\.jsx?$/, loaders: ['babel'],
