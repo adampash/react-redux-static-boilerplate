@@ -7,3 +7,11 @@ export const TEST = 'TEST'
 export function test(text) {
   return { type: TEST, text }
 }
+
+export function testAsync(text) {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(test(text))
+    }, 1000)
+  }
+}
