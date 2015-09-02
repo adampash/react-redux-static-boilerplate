@@ -5,7 +5,8 @@
   "main": "webpack.common.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "./bin/build"
   },
   "author": "Adam Pash",
   "license": "MIT",

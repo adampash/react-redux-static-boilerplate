@@ -17,7 +17,7 @@ config.output = {
   // this file is served directly by webpack
   filename: 'bundle.js',
   path: __dirname,
-  publicPath: '/static/'
+  publicPath: '/'
 }
 config.plugins = [
   new webpack.HotModuleReplacementPlugin(),
@@ -35,7 +35,7 @@ config.module.loaders.push(
       {
         test: /\.scss$/,
         loader: "style!css?sourceMap!autoprefixer-loader!sass"
-      }, // loaders: ['style', 'css', 'sass', 'autoprefixer']},
+      },
       {
         test: /\.jsx?$/, loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, 'src')
