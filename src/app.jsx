@@ -3,7 +3,7 @@ import AppContainer from './containers/AppContainer.jsx'
 import { compose, createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-import { testApp } from './reducers/example'
+import testApp from './reducers/example'
 import { devTools, persistState } from 'redux-devtools'
 import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react'
 
@@ -26,7 +26,7 @@ let store = finalCreateStore(testApp)
 if (module.hot) {
   // Enable Webpack hot module replacement for reducers
   module.hot.accept('./reducers/example', () => {
-    const nextRootReducer = require('./reducers/example').testApp
+    const nextRootReducer = require('./reducers/example')
     store.replaceReducer(nextRootReducer)
   })
 }
