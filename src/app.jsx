@@ -2,8 +2,9 @@ import React from 'react'
 import AppContainer from './containers/AppContainer.jsx'
 import { compose, createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
+import 'babel-core/polyfill'
 import { Provider } from 'react-redux'
-import testApp from './reducers/example'
+import exampleApp from './reducers/example'
 import { devTools, persistState } from 'redux-devtools'
 import { DevTools, DebugPanel, LogMonitor } from 'redux-devtools/lib/react'
 
@@ -22,7 +23,7 @@ if (__DEVTOOLS__) {
 
 const finalCreateStore = compose(...composers)(createStore)
 
-let store = finalCreateStore(testApp)
+let store = finalCreateStore(exampleApp)
 if (module.hot) {
   // Enable Webpack hot module replacement for reducers
   module.hot.accept('./reducers/example', () => {

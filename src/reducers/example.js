@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { TEST } from '../actions/example'
 import _ from 'lodash'
 
-function foo(state={foo: 'bar'}, action) {
+function foo(state='bar', action) {
   switch (action.type) {
   case TEST:
     return action.text
@@ -11,11 +11,11 @@ function foo(state={foo: 'bar'}, action) {
   }
 }
 
-const testApp = combineReducers({
+const exampleApp = combineReducers({
   foo
 })
 
-export default testApp
+export default exampleApp
 
 // below is without combinereducers
 // const initialState = {foo: 'bar'}
