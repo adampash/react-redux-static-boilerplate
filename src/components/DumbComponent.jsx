@@ -6,10 +6,14 @@ export default DumbComponent = React.createClass({
   handleClick(e) {
     this.props.test('oh hi')
   },
+
   render() {
     return(
-      <div onClick={this.handleClick} className="dummy" style={styles.dummy} >
-        Hello world {this.props.foo}; hi
+      <div
+        onClick={this.handleClick}
+        className="dummy" style={styles.dummy}
+      >
+        Hello world! {this.props.foo}
       </div>
     )
   }

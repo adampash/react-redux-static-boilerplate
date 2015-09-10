@@ -9,9 +9,7 @@ if (config.home) {
   url = "http://0.0.0.0"
 }
 
-config.entry.push('webpack-dev-server/client?' + url + ':3000',
-  'webpack/hot/only-dev-server'
-)
+config.entry.push('webpack-hot-middleware/client')
 config.output = {
 
   // this file is served directly by webpack
@@ -21,6 +19,7 @@ config.output = {
 }
 config.plugins = [
   new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin(),
   new webpack.DefinePlugin({
     __CLIENT__: true,
     __SERVER__: false,
