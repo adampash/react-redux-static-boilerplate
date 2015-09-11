@@ -16,7 +16,6 @@ let AppContainer = React.createClass({
 })
 
 function select(state) {
-  console.log(state)
   return {foo: state.foo}
 }
 
