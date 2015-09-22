@@ -36,7 +36,7 @@
                       Say you’re a wild raccoon and you want to use the Precious Moments-esque saucer eyes you’ve been gifted with to trick a human into feeding you regularly. You could pick just anyone, or you could be efficient and choose a hippie who will let you walk all over her (or in this case, roll a stone over her glass door for sometimes hours at a time, causing physical damage to her property). What do you do? If you’re the wily motherfucker above, you go with the hippie and you roll your way to viral fame while eating the profits.
                       </p>
                       <p>
-                      <iframe src="/" class="custom" width="100%" height="820"></iframe>
+                      <iframe src="./" class="custom" width="100%" height="820"></iframe>
                       <p class="first-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                       </p>
@@ -60,5 +60,13 @@
       <!--   </div> -->
       <!-- </section> -->
     </div>
+    <script type="text/javascript">
+      window.addEventListener('message', function(event) {
+        var data = JSON.parse(event.data);
+        var height = data.kinja.resizeFrame.height;
+        var iframe = document.getElementsByClassName('custom')[0];
+        iframe.setAttribute('height', height);
+      });
+    </script>
   </body>
 </html>
