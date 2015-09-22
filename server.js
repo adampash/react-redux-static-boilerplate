@@ -13,7 +13,13 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
+app.get('/test', function(req, res) {
+  // console.log('rendering test')
+  res.sendFile(path.join(__dirname, 'test.html'));
+});
+
 app.get('*', function(req, res) {
+  // console.log('rendering index')
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
