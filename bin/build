@@ -2,8 +2,9 @@
 
 mkdir -p build
 
-echo "Copying index.html to build"
+echo "Copying index.html and test dir to build"
 cp index.html build/
+cp -r test build/
 echo "[DONE]"
 echo "Compiling webpack bundle"
 webpack -p --config webpack.production.config.js
