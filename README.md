@@ -6,7 +6,7 @@ npm run start
 
 Test the interactive in an iframe by navigating to:
 
-[http://localhost:3000/test/](http://localhost:3000/test/).
+[http://localhost:3000/test/](http://localhost:3000/test/)
 
 ## Deploy
 ```bash
