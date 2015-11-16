@@ -24,7 +24,7 @@ config.plugins = [
     __CLIENT__: true,
     __SERVER__: false,
     __DEVELOPMENT__: true,
-    __DEVTOOLS__: false  // <-------- DISABLE redux-devtools HERE (disable w/false)
+    __DEVTOOLS__: true  // <-------- DISABLE redux-devtools HERE (disable w/false)
   }),
 ]
 config.devtool = 'eval-source-map'

@@ -1,4 +1,5 @@
 import React from 'react'
+import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import {
   DevTools,
@@ -12,13 +13,13 @@ import AppContainer from './containers/AppContainer.jsx'
 window.React = React
 let store = configureStore()
 
-React.render(
+render(
   <div>
     <Provider store={store}>
-      {() => <AppContainer />}
+      <AppContainer />
     </Provider>
     {__DEVTOOLS__ &&
-      <DebugPanel top right bottom>
+      <DebugPanel top right bottom visibleOnLoad={false} >
         <DevTools store={store} monitor={LogMonitor} />
       </DebugPanel>
       }
